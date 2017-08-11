@@ -1,0 +1,21 @@
+# compare https://editorconfig.org/
+# and https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.pp]
+indent_style = space
+indent_size = 2
+
+[*.{rb,erb}]
+indent_style = space
+indent_size = 2
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+

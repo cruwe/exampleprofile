@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+:merge_behavior: deeper
+:yaml:
+  :datadir: ./hieradata
+:hierarchy:
+  - "nodes/%{::fqdn}"
+  - "common"
+:logger: console
