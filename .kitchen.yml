@@ -34,12 +34,14 @@ platforms:
     driver_plugin: vagrant
     driver_config:
       box: bento/centos-7.3
+      linked_clone: true
       vagrantfiles:
         - install-basics.rb
   - name: centos-72-vagrant
     driver_plugin: vagrant
     driver_config:
       box: bento/centos-7.2
+      linked_clone: true
       vagrantfiles:
         - install-basics.rb
 
