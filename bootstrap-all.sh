@@ -17,7 +17,8 @@ do
     lxc exec ${container} -- mkdir /root/.ssh
     wait
 
-    lxc exec ${container} -- yum update -y
+    lxc exec ${container} -- yum update -y && \
+    lxc exec  ${container} -- yum install -y openssh-server sudo rsync
 
     kitchen converge ${container}
     kitchen destroy ${container}

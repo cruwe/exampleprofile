@@ -1,0 +1,13 @@
+---
+exampleprofile::basic::users:
+  bafh:
+    comment: 'Bastard Administrator From Hell'
+    home: /home/bafh
+    shell: /bin/bash
+    uid: 666
+    groups:
+      - adm
+      - systemd-journal
+      - users
+      - wheel
+    password: "$1$9yLij0yC$LXQz/.H.Qjt1vxgYlKe2s/ " # soevil
