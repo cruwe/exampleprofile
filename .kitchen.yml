@@ -30,6 +30,16 @@ busser:
   ruby_bindir: /usr/bin
 
 platforms:
+  - name: centos/7/lxd-puppet-BOOTSTRAP
+    driver_plugin: lxd_cli
+    driver_config:
+      image_name: images:centos/7/amd64
+      publish_image_name: "puppet-base-centos7"
+      use_publish_image: true
+      publish_image_before_destroy: true
+      publish_image_overwrite: true
+      lxd_unique_name: false
+      enable_wait_for_ssh_login: false
   - name: centos-73-vagrant
     driver_plugin: vagrant
     driver_config:
@@ -47,11 +57,15 @@ platforms:
   - name: centos-7-lxd
     driver_plugin: lxd_cli
     driver_config:
-      image_name: images:centos/7/amd64
+      image_name: puppet-base-centos7
       lxd_unique_name: false
       enable_wait_for_ssh_login: false
 
 suites:
+  - name: bootstrap
+    includes:
+      - centos/7/lxd-puppet-BOOTSTRAP
+
   - name: base
     provisioner:
       custom_pre_apply_command: |
