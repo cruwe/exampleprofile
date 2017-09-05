@@ -44,6 +44,12 @@ platforms:
       linked_clone: true
       vagrantfiles:
         - install_basics.rb
+  - name: centos-7-lxd
+    driver_plugin: lxd_cli
+    driver_config:
+      image_name: images:centos/7/amd64
+      lxd_unique_name: false
+      enable_wait_for_ssh_login: false
 
 suites:
   - name: base
@@ -55,6 +61,7 @@ suites:
     includes:
       - centos-73-vagrant
       - centos-72-vagrant
+      - centos-7-lxd
 
   - name: advanced
     provisioner:
