@@ -44,10 +44,11 @@
 #
 class exampleprofile::basic {
 
+  $groups = hiera_hash('exampleprofile::basic::groups')
+
   $users = hiera_hash('exampleprofile::basic::users')
-  notice ("${users}")
+  $userdefs = { managehome => true }
 
-  ensure_resources('user',$users)
-
-
+  ensure_resources('group',$groups)
+  ensure_resources('user', $users, $userdefs)
 }

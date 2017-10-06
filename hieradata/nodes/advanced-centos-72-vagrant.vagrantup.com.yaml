@@ -10,4 +10,4 @@ exampleprofile::basic::users:
       - systemd-journal
       - users
       - wheel
-    password: "$1$9yLij0yC$LXQz/.H.Qjt1vxgYlKe2s/ " # soevil
+    password: "$1$9yLij0yC$LXQz/.H.Qjt1vxgYlKe2s/" # soevil

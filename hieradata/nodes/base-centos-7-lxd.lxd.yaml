@@ -1,10 +1,15 @@
 ---
+exampleprofile::basic::groups:
+  bafh:
+    gid: 666
+
 exampleprofile::basic::users:
   bafh:
     comment: 'Bastard Administrator From Hell'
     home: /home/bafh
     shell: /bin/bash
     uid: 666
+    gid: bafh
     groups:
       - adm
       - systemd-journal
